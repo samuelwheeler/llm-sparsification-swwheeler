@@ -1,0 +1,10 @@
+name: sparsity_experiments
+dependencies:
+  -numpy
+  -pandas
+  -torch
+  -transformers
+  -sentencepiece
+  -evaluate
+  -datasets
+  -random
