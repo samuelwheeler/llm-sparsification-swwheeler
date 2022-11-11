@@ -1,20 +1,19 @@
 from transformers import pipeline, set_seed
-from transformers import GPT2Tokenizer, GPT2Model, DataCollatorWithPadding
+from transformers import GPT2Tokenizer, GPT2Model, DataCollatorWithPadding,GPT2Config
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, AutoModelForSeq2SeqLM, GPT2ForSequenceClassification
 import torch
 from torch import nn
 import torch.nn.utils.prune as prune
 import torch.nn.functional as F
-from transformers import BertTokenizer
+from transformers import BertTokenizer, GPT2LMHeadModel
 from datasets import load_dataset, load_metric
 from transformers import TrainingArguments
 from transformers import Trainer
 import numpy as np
 import evaluate
 import random
-import pandas as pd
 
-checkpoint = "gpt2"
+checkpoint = "gpt2-xl"
 configuration = GPT2Config()
 tokenizer = GPT2Tokenizer.from_pretrained(checkpoint)
 model = GPT2ForSequenceClassification(configuration).from_pretrained(checkpoint)
