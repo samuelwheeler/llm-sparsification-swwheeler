@@ -50,7 +50,7 @@ metric = load_metric("glue", "cola")
 
 def get_preds():
     predictions = trainer.predict(tokenized_datasets["validation"])
-    preds = np.argmax(preds.predictions, axis=-1)
+    preds = np.argmax(predictions.predictions, axis=-1)
     return metric.compute(predictions = preds, references = predictions.label_ids)
 
 def flatten_model(modules):
