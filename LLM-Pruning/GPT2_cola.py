@@ -12,6 +12,7 @@ from transformers import Trainer
 import numpy as np
 import evaluate
 import random
+import pandas as pd
 
 checkpoint = "gpt2-xl"
 configuration = GPT2Config()
