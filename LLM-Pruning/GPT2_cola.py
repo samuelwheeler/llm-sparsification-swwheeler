@@ -43,7 +43,7 @@ trainer = Trainer(
     tokenizer = tokenizer
 )
 
-#trainer.train()
+trainer.train()
 
 metric = load_metric("glue", "cola")
 
