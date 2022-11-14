@@ -43,6 +43,8 @@ trainer = Trainer(
     tokenizer = tokenizer
 )
 
+print(next(model.parameters()).is_cuda)
+
 trainer.train()
 
 metric = load_metric("glue", "cola")
